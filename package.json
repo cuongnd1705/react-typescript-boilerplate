@@ -29,6 +29,12 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "**/*.{ts,js,tsx,jsx}": [
+      "yarn lint:fix",
+      "yarn prettier:fix"
+    ]
+  },
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@reduxjs/toolkit": "^1.6.0",
