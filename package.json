@@ -7,14 +7,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint './src/**/*.{js,ts,tsx}' --fix",
-    "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.js|*.scss)\"",
-    "prettier:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.js|*.scss)\""
+    "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.js|*.css)\"",
+    "prettier:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.js|*.css)\"",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -29,6 +30,7 @@
     ]
   },
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.0.0",
@@ -37,7 +39,6 @@
     "bootstrap": "4.6.0",
     "query-string": "^7.0.1",
     "react": "^17.0.2",
-    "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
@@ -54,6 +55,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
+    "autoprefixer": "^9",
     "eslint": "^7.29.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.3.0",
@@ -62,8 +64,11 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "node-sass": "4.14.1",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.1",
+    "postcss": "^7",
     "prettier": "^2.3.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.1.2"
   }
 }
