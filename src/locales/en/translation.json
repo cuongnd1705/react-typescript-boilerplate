@@ -1,0 +1,53 @@
+{
+  "title": {
+    "account": "Account",
+    "changePassword": "Change Password",
+    "login": "Login"
+  },
+  "button": {
+    "login": "Login"
+  },
+  "label": {},
+  "form": {
+    "placeholder": {
+      "pid": "Please type your PID.",
+      "password": "Please type your password.",
+      "currentPassword": "Please type your current password.",
+      "newPassword": "Please type your new password.",
+      "confirmPassword": "Please confirm your new password."
+    },
+    "rules": {
+      "required": {
+        "username": "Username is required.",
+        "password": "Password is required.",
+        "currentPassword": "Current password is required.",
+        "newPassword": "New password is required.",
+        "confirmPassword": "Confirm password is required."
+      },
+      "min": {
+        "password": "Minimum password has 6 characters."
+      },
+      "max": {
+        "password": "Maximum password has 10 characters."
+      },
+      "conflict": {
+        "newPassword": "The new password cannot be the same as the current password.",
+        "confirmPassword": "The confirmation password does not match the new password."
+      }
+    }
+  },
+  "toast": {
+    "loginSuccess": "Login success.",
+    "loginFailed": "Login failed.",
+    "logoutSuccess": "Logout success.",
+    "logoutFailed": "Logout failed.",
+    "changePasswordSuccess": "Change password success.",
+    "changePasswordFailed": "Change password failed.",
+    "incorrectPIDorPassword": "$t(toast.loginFailed) Incorrect PID or password.",
+    "incorrectCurrentPassword": "$t(toast.changePasswordFailed) Incorrect password."
+  },
+  "language": {
+    "vietnamese": "Vietnamese",
+    "english": "English"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": {
+    "account": "Tài khoản",
+    "changePassword": "Đổi mật khẩu",
+    "login": "Đăng nhập"
+  },
+  "button": {
+    "login": "Đăng nhập"
+  },
+  "label": {},
+  "form": {
+    "placeholder": {
+      "username": "Vui lòng nhập tài khoản.",
+      "password": "Vui lòng nhập mật khẩu.",
+      "currentPassword": "Vui lòng nhập mật khẩu hiện tại.",
+      "newPassword": "Vui lòng nhập mật khẩu mới.",
+      "confirmPassword": "Vui lòng xác nhận mật khẩu mới."
+    },
+    "rules": {
+      "required": {
+        "pid": "Bạn chưa nhập PID.",
+        "password": "Bạn chưa nhập mật khẩu.",
+        "currentPassword": "Bạn chưa nhập mật khẩu hiện tại.",
+        "newPassword": "Bạn chưa nhập mật khẩu mới.",
+        "confirmPassword": "Bạn chưa xác nhận mật khẩu mới."
+      },
+      "min": {
+        "password": "Mật khẩu có tối thiểu 6 ký tự."
+      },
+      "max": {
+        "password": "Mật khẩu có tối đa 10 ký tự."
+      },
+      "conflict": {
+        "newPassword": "Mật khẩu mới không được trùng với mật khẩu hiện tại.",
+        "confirmPassword": "Mật khẩu xác nhận không khớp với mật khẩu mới."
+      }
+    }
+  },
+  "toast": {
+    "loginSuccess": "Đăng nhập thành công.",
+    "loginFailed": "Đăng nhập thất bại.",
+    "logoutSuccess": "Đăng xuất thành công.",
+    "logoutFailed": "Đăng xuất thất bại.",
+    "changePasswordSuccess": "Đổi mật khẩu thành công.",
+    "changePasswordFailed": "Đổi mật khẩu thất bại.",
+    "incorrectPIDorPassword": "$t(toast.loginFailed) PID hoặc mật khẩu không chính xác.",
+    "incorrectCurrentPassword": "$t(toast.changePasswordFailed) Mật khẩu hiện tại không chính xác."
+  },
+  "language": {
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh"
+  }
+}

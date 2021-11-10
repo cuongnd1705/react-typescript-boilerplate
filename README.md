@@ -1,46 +1,162 @@
-# Getting Started with Create React App
+# ReactJS Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is build by Nguyen Duc Cuong
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Prerequisites](#prerequisites)
+- [Manual Installation](#manual-installation)
+- [Features](#features)
+- [Commands](#commands)
+- [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
+- [Linting](#linting)
+- [License](#license)
 
-### `yarn start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [NodeJS](https://nodejs.org/en) (Recommended LTS version)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Manual Installation
 
-### `yarn test`
+Clone the repo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://gitlab.com/CuongTelemed/ris-web-app.git
+cd ris-web-app
+```
 
-### `yarn build`
+Install [yarn](https://yarnpkg.com):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install -g yarn
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Install the dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn install
+```
 
-### `yarn eject`
+Set the environment variables:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+cp .env.example .env
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# open .env and modify the environment variables (if needed)
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **API Calling**: using [axios](https://github.com/axios/axios)
+- **CSS Framework**: using [tailwindcss](https://tailwindcss.com/)
+- **State Management**: using [redux](https://redux.js.org/) and [redux-saga](https://redux-saga.js.org/)
+- **Multi languages**: language management with [i18next](https://www.i18next.com/)
+- **Routing**: the application is routing with [react-router-dom](https://reactrouter.com/)
+- **Form Handling**: form handling with [react-hook-form](https://react-hook-form.com/)
+- **Validation**: form data validation using [yup](https://github.com/jquense/yup)
+- **Dependency management**: with [Yarn](https://yarnpkg.com)
+- **Environment variables**: using [dotenv](https://github.com/motdotla/dotenv) and [cross-env](https://github.com/kentcdodds/cross-env#readme)
+- **Git hooks**: with [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
+- **Linting**: with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
+- **Editor config**: consistent editor configuration using [EditorConfig](https://editorconfig.org)
 
-## Learn More
+## Commands
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs the app in the development mode:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn start
+```
+
+Launches the test runner in the interactive watch mode:
+
+```bash
+yarn test
+```
+
+Builds the app for production to the `build` folder:
+
+```bash
+yarn build
+```
+
+Linting:
+
+```bash
+# run ESLint
+yarn lint
+
+# fix ESLint errors
+yarn lint:fix
+
+# run prettier
+yarn prettier
+
+# fix prettier errors
+yarn prettier:fix
+```
+
+## Environment Variables
+
+The environment variables can be found and modified in the `.env` file. They come with these default values:
+
+`.env`
+
+```bash
+# api base URl
+REACT_APP_API_URL=http://localhost:5000
+```
+
+## Project Structure
+
+```
+src\                      # Contains all of our react codebase
+|-- app\                  # Global app setup
+|-- assets\               # Images, fonts and other static files
+|   |-- fonts\            # Fonts
+|   |-- images\           # Images
+|   |-- ...
+|-- components\           # Dumb components
+|   |-- Common\           # Common components
+|   |-- Form\             # Form components
+|   |-- Guard\            # Guard components
+|   |-- Layout\           # Layout components
+|   |-- ...
+|-- config\               # Config files
+|-- constants\            # Constants variables
+|-- features\             # Contains all feature folders
+|   |-- auth\             # Auth features
+|   |   |-- components\   # Components for auth features
+|   |   |-- pages\        # Pages for auth features
+|   |   |-- ...
+|   |-- ...
+|-- hooks\                # Custom hooks
+|-- locales\              # Multi language
+|   |-- en\               # English
+|   |-- vi\               # Vietnamese
+|   |-- ...
+|-- models\               # App modeling
+|-- routes\               # App routing.
+|-- services\             # Api call related functions.
+|-- types\                # Typescript related files or functions
+|-- utils\                # Utility classes and functions
+|-- index.tsx             # App entry point
+|-- ...
+```
+
+## Linting
+
+Linting is done using [ESLint](https://eslint.org/) and [Prettier](https://prettier.io).
+
+In this app, ESLint is configured to follow the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) with some modifications. It also extends [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to turn off all rules that are unnecessary or might conflict with Prettier.
+
+To modify the ESLint configuration, update the `.eslintrc` file. To modify the Prettier configuration, update the `.prettierrc` file.
+
+To prevent a certain file or directory from being linted, add it to `.eslintignore` and `.prettierignore`.
+
+To maintain a consistent coding style across different IDEs, the project contains `.editorconfig`
+
+## License
+
+[MIT](LICENSE)
