@@ -22,8 +22,8 @@ This project is build by Nguyen Duc Cuong
 Clone the repo:
 
 ```bash
-git clone https://gitlab.com/CuongTelemed/ris-web-app.git
-cd ris-web-app
+git clone https://github.com/cuongnd1705/react-typescript-boilerplate.git
+cd react-typescript-boilerplate
 ```
 
 Install [yarn](https://yarnpkg.com):
